@@ -1,0 +1,35 @@
+
+- [HOME Document](/)
+- [HISTORY Document](history.md)
+- SPP
+    - [Readme](SPP/README.md)
+    - Diagram
+        - [CRUD](SPP/diagram/CRUD.md)
+        - [Base of request](SPP/diagram/BaseOfRequest.md)
+        - [Log Activities](SPP/diagram/LogActivies.md)
+        - Backend
+            - [Action: DELETE](SPP/diagram/backend/ActionDELETE.md)
+            - [Action: EDIT](SPP/diagram/backend/ActionEDIT.md)
+            - [Action: POST](SPP/diagram/backend/ActionPOST.md)
+            - [Render: EDIT](SPP/diagram/backend/RenderEDIT.md)
+            - [Render: LIST](SPP/diagram/backend/RenderLIST.md)
+            - [Render: VIEW](SPP/diagram/backend/RenderVIEW.md)
+        - Function
+            - Authentication
+                - [Login](SPP/diagram/function/authentication/Login.md)
+                - [Logout](SPP/diagram/function/authentication/Logout.md)
+                - [Forget Password](SPP/diagram/function/authentication/ForgetPassword.md)
+            - Group
+                - [Create Group](SPP/diagram/function/group/CreateGroup.md)
+            - Organization
+                - [Create Organization](SPP/diagram/function/organization/CreateOrganization.md)
+            - Project
+                - [Create Project](SPP/diagram/function/project/CreateProject.md)
+            - Resource
+                - [Create Resource](SPP/diagram/function/resource/CreateResouce.md)
+            - Role
+                - [Create Role](SPP/diagram/function/role/CreateRole.md)
+            - Site Management
+                - [Create Site](SPP/diagram/function/site_management/CreateSite.md)
+            - User Management
+                - [Create User](SPP/diagram/function/user_management/CreateUser.md)

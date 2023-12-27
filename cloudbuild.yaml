@@ -1,0 +1,40 @@
+# Variable
+substitutions:
+  TRIGGER_NAME: 'manage-project-data'  # Service name
+  TAG_NAME: 'sit'  # Tag sit, uat, dev, prod
+  _REGISTRY: 'asia-southeast1-docker.pkg.dev/smart-pole-400502/frontend-services'  # Location Artifact Registry 
+
+# Build image
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_REGISTRY/$TRIGGER_NAME:$TAG_NAME'
+      - '--file'
+      - './deployment/Dockerfile-sit'
+      - '.'
+
+# Push image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_REGISTRY/$TRIGGER_NAME:$TAG_NAME'
+
+# Deploy image from Artifact Registry to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+    - 'run'
+    - 'deploy'
+    - '$TRIGGER_NAME-$TAG_NAME'
+    - '--image'
+    - '$_REGISTRY/$TRIGGER_NAME:$TAG_NAME'
+    - '--port'
+    - '3000'
+    - '--region'
+    - 'asia-southeast1'
+    - '--platform'
+    - 'managed'
+    - '--allow-unauthenticated'
+    - '--max-instances=1'

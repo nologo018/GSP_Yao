@@ -24,4 +24,4 @@ ref: https://mermaid.js.org/ecosystem/integrations-community.html
     - README.md
 ```
 
-> **Author:** Jirayu o. (Snoopy)
+> **Author:** Suthon.S

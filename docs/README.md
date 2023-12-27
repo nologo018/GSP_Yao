@@ -57,7 +57,7 @@ ref: https://github.com/iPeng6/docsify-sidebar-collapse
     - README.md
 ```
 
-## GIT repo. URL
-ref: https://git.touchdevops.com/jirayu.o/manage-project-data
+## 
+ref: V1
 
-> **Author:** Jirayu o. (Snoopy)
+> **Author:** SUTHON.S

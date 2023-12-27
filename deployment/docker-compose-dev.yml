@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  manage-project-data:
+    container_name: manage-project-data
+    image: manage-project-data:dev
+    ports:
+      - '8088:3000'
+    restart: always
